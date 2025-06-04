@@ -1,0 +1,54 @@
+🧪 Blood Cell Classification: Normal vs Abnormal
+
+This project aims to classify normal and abnormal blood cells using image data and deep learning techniques. It involves reading labeled image data, preprocessing it, and visualizing a sample of the dataset to support future model training and evaluation.
+📁 Dataset
+
+    The dataset is located in: ../input/cancer-data/m1/train
+
+    Image files are named with a three-digit prefix label:
+
+        000: Normal cell
+
+        001: Abnormal cell
+
+🛠️ Dependencies
+
+Make sure to install the following Python libraries before running the code:
+
+pip install numpy pandas opencv-python matplotlib seaborn tensorflow
+
+📌 Project Workflow
+1. Data Loading and Labeling
+
+    All images are read from the specified directory.
+
+    Each image is resized to 220×220 pixels.
+
+    Labels are extracted from the filename prefix and mapped using a dictionary:
+
+    dict_1 = {'000': 'normal', '001': 'not_normal'}
+
+2. Data Visualization
+
+    Random samples of the blood cell images are displayed in a 3×2 grid.
+
+    Each image is labeled with its respective class (normal or not_normal) for a quick visual inspection of the dataset quality.
+
+📊 Example Output
+
+A sample visualization panel will be generated, showing images with titles indicating whether the cells are normal or not.
+📌 Example Code Snippet
+
+img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_COLOR)
+img_array = cv2.resize(img_array, (220, 220))
+features.append(img_array)
+label = int(img[:3])
+labels.append(label)
+
+✅ Future Work
+
+    Training a deep learning model (CNN) for automated classification.
+
+    Model evaluation with validation/testing datasets.
+
+    Performance metrics: Accuracy, Precision, Recall, F1-Score, ROC-AUC.
