@@ -1,12 +1,45 @@
-Classification of Normal and Abnormal Cells in the Blood
+Optimizing Scene Classification: A Robust Approach with Transfer Learning and AutoML
+📌 Overview
+This repository contains the implementation of the research titled "Optimizing scene classification: A robust approach with transfer learning and automated machine learning integration". The project presents a hybrid approach that combines deep transfer learning using MobileNetV2 with automated machine learning (AutoML) using TPOT for scene classification across diverse remote sensing datasets.
 
-This project involves the classification of normal and abnormal cells in blood using deep learning techniques. The dataset contains labeled images of blood cells, which are used to train a model that can accurately distinguish between normal and abnormal cells. The implementation is in Python, leveraging libraries such as NumPy, pandas, OpenCV, TensorFlow, and Matplotlib.
-Dataset
+The main goal is to improve the accuracy, scalability, and generalization of scene classification models while minimizing manual effort in hyperparameter tuning.
 
-The dataset is located in the ../input/cancer-data/m1/train directory. It contains images of blood cells, each named in a way that indicates its label (normal or not normal).
-Usage in Research
+🧠 Key Features
 
-This code and dataset were used in our paper "A novel end-to-end deep learning approach for cancer detection based on microscopic medical images," published in Elsevier Biocybernetics and Biomedical Engineering.
-Citation
+    ✅ Transfer Learning using MobileNetV2 with removed top layers for lightweight and efficient feature extraction.
 
-If you use this code or dataset in your research, please cite our paper: https://www.sciencedirect.com/science/article/abs/pii/S020852162200047X
+    ⚙️ AutoML Integration using TPOT for automated pipeline generation and hyperparameter tuning.
+
+    🔍 Data Preprocessing with class distribution analysis and normalization.
+
+    🌍 Multi-Dataset Evaluation on:
+
+        AID (30 classes)
+
+        RESISC45 (45 classes)
+
+        Scene Recognition Dataset (6 classes)
+
+    📊 Achieved 100% test accuracy in controlled settings across all datasets.
+
+🧪 Usage
+
+Step 1: Prepare Datasets
+Download and place AID, RESISC45, and Scene Recognition datasets under the data/ directory.
+
+Step 2: Run Transfer Learning
+
+Step 3: Run AutoML with TPOT
+
+📈 Results
+Dataset	Accuracy
+AID	100%
+RESISC45	100%
+Scene Recog.	100%
+
+    Achieved under ideal lab conditions using curated high-quality imagery.
+
+📚 Citation
+
+If you use this code or dataset in your research, please cite the original paper:
+Hammad, M., Chelloug, S. A., AlShathri, S., & Abd El-Latif, A. A. (2025). Optimizing Scene Classification: A Robust Approach with Transfer Learning and Automated Machine Learning Integration. Journal of Engineering Research.
